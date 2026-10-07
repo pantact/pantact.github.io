@@ -111,7 +111,7 @@
   .authors .au{white-space:nowrap;margin:0 .45em;}
   .authors a{color:#fff;text-decoration:none;transition:opacity .15s ease;}
   .authors a:hover{color:#fff;opacity:.8;text-decoration:none;}
-  .authors sup{color:#fff;font-weight:700;}
+  .authors sup{color:#fff;font-weight:700;font-size:.6em;margin-left:1px;}
   .contrib{color:rgba(255,255,255,.85);font-size:var(--fs-ui);margin:2px 0 0;text-shadow:0 1px 8px rgba(0,0,0,.3);}
   .contrib sup{color:#fff;font-weight:700;}
   .contrib .sep{display:inline-block;width:1.4em;}
@@ -451,23 +451,14 @@
     </ul>
 
     <h3 style="text-align:center;margin-top:36px;">Three Controller Formulations</h3>
-    <div class="grid3" style="margin-top:16px;">
-      <div class="card">
-        <h4>Upper-Body IK</h4>
-        <p>Differential IK QP jointly optimizing EEF and contact tasks. Requires no training data or simulation;
-        limited to upper-body tasks with fixed legs.</p>
-      </div>
-      <div class="card">
-        <h4>WBIK + SONIC</h4>
-        <p>Contact-aware whole-body IK whose dense reference is executed by the existing SONIC motion tracker. Enables
-        lower-body contacts and locomotion.</p>
-      </div>
-      <div class="card">
-        <h4>Sparse Contact Tracker</h4>
-        <p>RL goal-conditioned controller that directly tracks sparse EEF and contact goals, trained in simulation with
-        <b>hindsight contact labeling</b>.</p>
-      </div>
-    </div>
+    <ul class="keypts" style="margin-top:16px;">
+      <li><b>Upper-Body IK.</b> Differential IK QP jointly optimizing EEF and contact tasks. Requires no training data or
+      simulation; limited to upper-body tasks with fixed legs.</li>
+      <li><b>WBIK + SONIC.</b> Contact-aware whole-body IK whose dense reference is executed by the existing SONIC motion
+      tracker. Enables lower-body contacts and locomotion.</li>
+      <li><b>Sparse Contact Tracker.</b> RL goal-conditioned controller that directly tracks sparse EEF and contact goals,
+      trained in simulation with <b>hindsight contact labeling</b>.</li>
+    </ul>
 
     <figure style="max-width:720px;margin:34px auto 0;">
       <img class="figimg" src="img/controller_comparison.jpg" alt="Controller comparison">
@@ -595,15 +586,6 @@
       to insufficient contact support. (d) Success rates. (e) Real-world tracking: Humanoid UMI++ continuously tracks knee
       poses with large error, while ours tracks leg contact goals accurately during active contact phases.</figcaption>
     </figure>
-  </div>
-</section>
-
-<!-- Acknowledgments -->
-<section id="acknowledgments">
-  <div class="wrap">
-    <h2>Acknowledgments</h2>
-    <!-- TODO: paste acknowledgments from the paper -->
-    <p class="ack">Acknowledgments to be added.</p>
   </div>
 </section>
 
